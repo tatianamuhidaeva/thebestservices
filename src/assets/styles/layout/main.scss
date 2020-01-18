@@ -1,0 +1,104 @@
+.main {
+  padding-top: 155px;
+  background-color: #fff;
+  .row{
+    align-items: center;
+  }
+  &-content{
+    flex: 1 0 auto;
+  }
+  &-figure {
+    flex: 1 1 546;
+    &__img{
+      width: 546px;
+      max-width: 100%;
+    }
+  }
+  &__title{
+    margin-bottom: 30px;
+    font-size: rem(70);
+    font-weight: 900;
+    &-sup {
+      margin-bottom: 30px;
+      font-size: rem(18);
+      font-weight: 400;
+    }
+    &-sub {
+      margin-bottom: 30px;
+      display: block;
+      font-size: rem(28);
+      font-weight: 600;
+    }
+  }
+
+}
+
+
+@media only screen and (max-width: $lg){
+  .main {
+    &__title{
+      margin-bottom: 15px;
+      font-size: rem(64);
+      &-sup {
+        font-size: rem(18);
+        font-weight: 400;
+      }
+      &-sub {
+        font-size: rem(24);
+      }
+    }
+  }
+}
+@media only screen and (max-width: $md){
+  .main {
+    padding-top: 200px;
+
+    .row{
+      flex-wrap: wrap;
+    }
+    &-content{
+      margin-bottom: 30px;
+    }
+    &-figure {
+      flex: 1 1 100%;
+      text-align: center;
+      &__img{
+        width: 390px;
+      }
+    }
+  }
+} 
+@media only screen and (max-width: $xs){
+  .main {
+  padding-top: 130px;
+
+    &__title{
+      margin-bottom: 15px;
+      font-size: rem(50);
+      &-sup {
+        font-size: rem(18);
+        margin-bottom: 20px;
+      }
+      &-sub {
+        font-size: rem(20);
+        margin-bottom: 20px;
+      }
+    }
+  }
+} 
+@media only screen and (max-width: $xxs){
+  .main {
+    &__title{
+      margin-bottom: 15px;
+      font-size: rem(36);
+      &-sup {
+        font-size: rem(14);
+        margin-bottom: 20px;
+      }
+      &-sub {
+        font-size: rem(16);
+        margin-bottom: 20px;
+      }
+    }
+  }
+} 

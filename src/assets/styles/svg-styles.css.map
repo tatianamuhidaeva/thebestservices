@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "components/svg-styles.scss"
+    ],
+    "names": [],
+    "file": "svg-styles.css"
+}

@@ -1,0 +1,131 @@
+.allevents-day {
+  background-color: $bg-light-color;
+  &-thumbs {
+    position: relative;
+    margin-bottom: 90px;
+
+    &-wrapper {
+      align-items: center;
+    }
+
+    &-slide {
+      font-size: 18px;
+      text-transform: uppercase;
+      text-align: center;
+      white-space: nowrap;
+      cursor: pointer;
+      &:hover{
+        text-decoration: underline;
+      }
+      &.swiper-slide-active {
+        font-size: 36px;
+        font-weight: 900;
+      }
+    }
+    &-prev,
+    &-next {
+      svg {
+        width: 20px;
+        max-height: 100%;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &-prev {
+      transform: scale(-1);
+      left: 10px;
+    }
+
+    &-next {
+      right: 10px;
+    }
+  }
+
+  &-slide{
+    li{
+      display: none;
+      opacity: 0;
+      font-size: 20px;
+      position: relative;
+      margin-bottom: 25px;
+      padding-left: 40px;
+      &:nth-of-type(-n+2){
+        display: block;
+        opacity: 1;
+      }
+      &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 21px;
+        height: 21px;
+        border-radius: 50%;
+        
+      }
+      &.trening::before{
+        background-color: $trening;
+      }
+      &.events::before{
+        background-color: $events;
+      }
+      &.news::before{
+        background-color: $news;
+      }
+      >a{
+        justify-content: space-between;
+      }
+    }
+    visibility: hidden;
+    &.swiper-slide-active {
+      visibility: visible;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .allevents-day {
+    &-thumbs {
+      position: relative;
+      margin-bottom: 60px;
+  
+      &-slide {
+        &.swiper-slide-active {
+          font-size: 24px;
+        }
+      }
+    }
+    &-slide {
+      li{
+        font-size: 18px;
+      }
+    }
+  }
+}
+@media (max-width: $xs) {
+  .allevents-day {
+    &-thumbs {
+      position: relative;
+      margin-bottom: 60px;
+  
+      &-slide {
+        &.swiper-slide-active {
+          font-size: 18px;
+        }
+      }
+    }
+    &-slide {
+      li{
+        font-size: 16px;
+        padding-left: 0;
+        &::before{
+          display: none;
+        }
+      }
+    }
+  }
+}

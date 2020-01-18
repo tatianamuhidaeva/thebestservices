@@ -1,0 +1,2 @@
+.navblock__paginations{counter-reset:myCounter}.navblock__pagination input[type="radio"]{position:absolute;width:0;height:0;left:-99999px}.navblock__pagination:before{counter-increment:myCounter;content:counter(myCounter);color:white;background:#2980B9;display:inline-block;text-align:center;margin:5px 10px;line-height:40px;width:40px;height:40px}
+/*# sourceMappingURL=navblock.css.map */

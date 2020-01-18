@@ -1,0 +1,68 @@
+<section class="calendar">
+  <div class="container">
+    <h2 class="calendar__title section__title-1">Календарь</h2>
+    <ul class="calendar-tegs">
+      <li class="calendar-teg">
+        <span class="calendar__mark calendar__mark--trening"></span>
+        <span class="calendar__mdash"></span>
+       Тренинги
+      </li>
+      <li class="calendar-teg">
+        <span class="calendar__mark calendar__mark--events"></span>
+        <span class="calendar__mdash"></span>
+        Интересные события
+      </li>
+      <li class="calendar-teg">
+        <span class="calendar__mark calendar__mark--news"></span>
+        <span class="calendar__mdash"></span>
+        Новости
+      </li>
+    </ul>
+
+    <div class="calendar-thumbs">
+
+      <!-- If we need navigation buttons -->
+      <div class="calendar-thumbs-prev swiper-button-prev d-none-md d-flex-xs"><svg><use xlink:href="assets/sprites/sprite.svg#arrow"></use></svg></div>
+      <div class="calendar-thumbs-next swiper-button-next d-none-md d-flex-xs"><svg><use xlink:href="assets/sprites/sprite.svg#arrow"></use></svg></div>
+
+      <div id="calendar-thumbs" class="calendar-thumbs-container swiper-container">
+        <div class="calendar-thumbs-wrapper swiper-wrapper">
+          <div class="calendar-thumbs-slide swiper-slide">
+            СЕНТЯБРЬ 2019
+          </div>
+          <div class="calendar-thumbs-slide swiper-slide ">
+            ОКТЯБРЬ 2019
+          </div>
+          <div class="calendar-thumbs-slide swiper-slide">
+            НОЯБРЬ 2019
+          </div>
+          <div class="calendar-thumbs-slide swiper-slide">
+            ДЕКАБРЬ 2019
+          </div>
+          <div class="calendar-thumbs-slide swiper-slide">
+            ЯНВАРЬ 2020
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calendar-slider">
+
+      <!-- If we need navigation buttons -->
+
+      <div id="calendar-slider" class="calendar-container swiper-container">
+        <div class="calendar-wrapper swiper-wrapper">
+          <div class="calendar-slide swiper-slide">
+              <include src="src/html/includes/components/calendar-one-month.html"></include>
+          </div>
+          <div class="calendar-slide swiper-slide">
+              <include src="src/html/includes/components/calendar-one-month.html"></include>
+          </div>
+          <div class="calendar-slide swiper-slide">
+              <include src="src/html/includes/components/calendar-one-month.html"></include>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+</section>

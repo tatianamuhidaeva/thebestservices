@@ -1,0 +1,28 @@
+<section id="feedback" class="feedback ">
+  <div class="container">
+    <h2 class="feedback__title section__title-2">Остались вопросы?</h2>
+    <div class="row">
+      <div class="feedback-col-l">
+    <form class="feedback-form bid__form">
+        <div class="feedback-form__row">
+          <input type="text" class="feedback-form__input input" id="feedback-form__name" name="name" placeholder="Имя" required>
+          <input type="email" class="feedback-form__input input" id="feedback-form__email" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="feedback-form__row">
+          <textarea class="feedback-form__textarea textarea" id="feedback-form__message" name="message" rows="4" placeholder="Сообщение"></textarea>
+        </div>
+        <div class="feedback-form__row">
+        <div class="feedback-form__terms terms">
+          <input type="checkbox" class="feedback-form__checkbox" id="feedback-form__terms" name="terms" checked>
+          <label for="feedback-form__terms">Согласен с политикой конфидециальности</label>
+        </div>
+        <button class="feedback-form__btn btn" type="submit">Отправить</button>
+      </div>
+      </form>
+    </div>
+    <div class="feedback-col-r d-none-md">
+      <svg id="feedback__plane"><use xlink:href="assets/sprites/sprite.svg#plane"></use></svg>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+.lk{
+  &__title{
+    margin-bottom: 27px;
+  }
+  &__subtitle{
+    max-width: none;
+    margin-bottom: 67px;
+    a{
+      font-size: 15px;
+      font-weight: 400;
+      color: #F27656;
+      sup{
+        position: relative;
+        bottom: 0.4em;
+      }
+    }
+  }
+  .accordion__child{
+    padding-left: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 745px;
+  }
+  .link-with-squarebtn{
+    margin-bottom: 20px;
+  }
+}

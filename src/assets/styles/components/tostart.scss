@@ -1,0 +1,20 @@
+.tostart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #000000;
+  background-color: rgba(#fff, 0.7);
+  transform: rotate(-90deg);
+  z-index: 99;
+  cursor: pointer;
+  svg{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+}

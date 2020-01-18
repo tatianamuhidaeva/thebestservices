@@ -1,0 +1,32 @@
+.long-arrow{
+  display: inline-block;
+  position: relative;
+  height: 3px;
+  width: 100%;
+  background-color: #619BAF;
+  &-tick{
+    position: absolute;
+    top: -10.5px;
+    right: -2px;
+    >svg{
+      width: 17px;
+      height: 21px;
+      object-fit: contain;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .long-arrow{
+    height: 2px;
+    &-tick{
+      position: absolute;
+      top: -8.7px;
+      right: -2px;
+      >svg{
+        width: 10px;
+        height: 12px;
+      }
+    }
+  }
+}

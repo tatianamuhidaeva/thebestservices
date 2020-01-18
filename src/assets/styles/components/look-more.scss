@@ -1,0 +1,83 @@
+.look-more{
+  display: flex;
+  justify-content: center;
+
+  a {
+    padding-bottom: 8px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      bottom: 3px;
+      display: block;
+      height: 1px;
+      width: 85%;
+      background-color: $text-color;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      right: 0;
+      bottom: 0px;
+      width: 8px;
+      height: 6px;
+
+      background: {
+        repeat: no-repeat;
+        color: rgba(#ffffff, 0);
+        image: url('assets/images/static/triangle.svg');
+        size: contain;
+        position: center;
+      }
+    }
+
+  }
+      &-big{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        &:hover {
+          filter: none;
+        }
+      
+        &:hover &__text {
+          text-decoration: underline;
+        }
+      
+        &:hover &__btn {
+          text-decoration: none;
+          background-color: $btn-hover-color;
+          border: 0;
+      
+          svg {
+            stroke: #fff;
+            fill: #fff;
+          }
+        }
+        &__text{
+          font-size: 20px;
+          font-weight: 500;
+        }
+        &__btn {
+          flex-shrink: 0;
+          display: inline-block;
+          width: 44px;
+          height: 44px;
+          padding: 0;
+          margin-left: 20px;
+          margin-right: 4px;
+      
+          svg {
+            width: 20px;
+            max-height: 100%;
+            transform: rotate(90deg);
+          }
+        }
+      }
+}

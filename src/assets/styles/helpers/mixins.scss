@@ -1,0 +1,62 @@
+@function rem($pixels, $context: $mainFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+@mixin size($width,$height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin p-l {
+  padding-left: 125px; 
+  @media only screen and (max-width: $lg){
+  padding-left: 80px; 
+  }
+  @media only screen and (max-width: $md){
+  padding-left: 0; 
+  }
+}
+@mixin p-r {
+  padding-right: 125px; 
+  @media only screen and (max-width: $lg){
+  padding-right: 80px; 
+  }
+  @media only screen and (max-width: $md){
+  padding-right: 0; 
+  }
+}
+@mixin p-lr($val) {
+  padding-left: $val;
+  padding-right: $val;
+}
+@mixin m-lr($val) {
+  margin-left: $val;
+  margin-right: $val;
+}
+
+@mixin li-marker {
+  padding-left: 45px;
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 30px;
+    height: 1px;
+    background-color: $text-color;
+  }
+  @media (max-width: $xs) {
+    padding-left: 22px;
+    &::before{
+      width: 14px;
+    }
+  }
+}

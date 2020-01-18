@@ -1,0 +1,322 @@
+.calendar {
+  background-color: #fff;
+  padding-top: 120px;
+
+  &__title {
+    margin-bottom: 83px;
+  }
+
+  &-tegs {
+    display: flex;
+    margin-bottom: 50px;
+    align-items: flex-start;
+  }
+
+  &-teg {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    font-size: 12px;
+  }
+
+  &__mark {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+
+    &--trening {
+      background-color: $trening;
+    }
+
+    &--events {
+      background-color: $events;
+    }
+
+    &--news {
+      background-color: $news;
+    }
+  }
+
+  &__mdash {
+    display: inline-block;
+    margin: 0 10px;
+    width: 38px;
+    height: 1px;
+    background-color: $text-color;
+  }
+
+  &-thumbs {
+    position: relative;
+    margin-bottom: 90px;
+
+    &-wrapper {
+      align-items: center;
+    }
+
+    &-slide {
+      font-size: 18px;
+      text-transform: uppercase;
+      text-align: center;
+      white-space: nowrap;
+      cursor: pointer;
+      &:hover{
+        text-decoration: underline;
+      }
+
+      &.swiper-slide-active {
+        font-size: 36px;
+        font-weight: 900;
+      }
+    }
+
+    &-prev,
+    &-next {
+      svg {
+        width: 20px;
+        max-height: 100%;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &-prev {
+      transform: scale(-1);
+      left: 80px;
+    }
+
+    &-next {
+      right: 80px;
+    }
+  }
+
+  &-slider {
+    padding: 0 100px;
+    margin-bottom: 50px;
+  }
+
+  &-slide {
+  display: none;
+    &.swiper-slide-active{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .look-more{
+      margin-top: 30px;
+      flex-basis: 100%;
+    }
+  }
+
+  &__day {
+    display: none;
+    opacity: 0;
+    position: relative;
+    flex: 0 1 25%;
+    padding: 40px 47px;
+    overflow: visible;
+
+
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    &-num {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    &-text {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    &-more {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      color: $text-orange;
+      text-align: right;
+    }
+    &-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 4;
+      svg{
+        display: none;
+        width: 100%;
+        height: 100%;
+      }
+      &:hover, &:focus{
+        // transition-duration: 0;
+        outline: none;
+        // background: {
+        //   repeat: no-repeat;
+        //   color: rgba(#ffffff, 0);
+        //   image: url('assets/images/static/marker-circle.svg');
+        //   size: 100% 100%;
+        //   position: center;
+        // }
+        svg{
+          display: block;
+         .cls-1{
+            display: block;
+            animation-play-state: running;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: $xlg) {
+  .calendar {
+    &__day {
+      &:nth-of-type(-n+8){
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
+}
+@media (min-width: $md)and(max-width: $xlg) {
+  .calendar {
+    padding-top: 200px;
+    &__day {
+      &:nth-of-type(-n+6){
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
+}
+@media (min-width: $xs)and(max-width: $md) {
+  .calendar {
+    &__day {
+      &:nth-of-type(-n+4){
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
+}
+@media (max-width: $xs) {
+  .calendar {
+    padding-top: 86px;
+    &__day {
+      &:nth-of-type(-n+2){
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
+}
+@media (max-width: $xlg) {
+  .calendar {
+    &__day {
+      flex: 0 1 33%;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .calendar {
+    &-thumbs {
+
+      &-slide {
+        &.swiper-slide-active {
+          font-size: 30px;
+        }
+      }
+      &-prev {
+        left: 35px;
+      }
+
+      &-next {
+        right: 35px;
+      }
+    }
+
+    &-slider {
+      padding: 0 10px;
+    }
+
+    &__day {
+      padding: 20px 25px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .calendar {
+    &__title{
+      margin-bottom: 50px;
+    }
+    &-tegs {
+      justify-content: center;
+    }
+    &-thumbs {
+      margin-bottom: 40px;
+      &-slide {
+        &.swiper-slide-active {
+          font-size: 24px;
+        }
+      }
+    }
+    &__day {
+      flex: 0 1 50%;
+      padding: 25px 40px;
+      &-num{
+        font-size: 18px;
+      }
+      // flex: 0 1 50%;
+      &-text{
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media (max-width: $sm) {
+  .calendar {
+    &-teg{
+      margin-right: 10px;
+    }
+    &__day {
+      padding: 20px 15px;
+    }
+  }
+}
+@media (max-width: $xs) {
+  .calendar {
+    &-tegs{
+      flex-direction: column;
+    }
+    &-teg{
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    &-thumbs {
+
+      &-prev {
+        left: 5px;
+      }
+
+      &-next {
+        right: 5px;
+      }
+    }
+    &__day {
+      padding: 20px 15px;
+      flex: 0 1 100%;
+    }  
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAEI,oBAFgB,AAAA,UAAU,CAEzB,iBAAO,AAAA,CACN,WAAW,CAAE,IAAI,CACjB,YAAY,CAAE,CAAC,CACf,SAAS,CAAE,IAAI,CACf,aAAa,CAAE,IAAI,CACpB",
+    "sources": [
+        "layout/accordion-documents.scss"
+    ],
+    "names": [],
+    "file": "accordion-documents.css"
+}

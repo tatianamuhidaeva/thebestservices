@@ -1,0 +1,60 @@
+.microfinance-types{
+  &__row{
+    align-items: center;
+    // max-width: 1400px;
+  }
+  &__col-l{
+    flex: 1 0 auto;
+    margin-right: 30px;
+  }
+  &__col-r{
+    flex: 1 1 429px;
+  }
+  &__definitions{
+    @include p-l;
+    // max-width: 1204px;
+    dt{
+      display: flex;
+
+      font-size: 36px;
+      font-weight: 500;
+      color: $text-primary-color;
+      margin-bottom: 15px;
+      &::before{
+        content: "\201C";
+      }
+      &::after{
+        content: "\201D";
+      }
+    }
+    dd{
+      margin-bottom: 50px;
+      p{
+        font-size: 24px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+
+@media (max-width: $xs) {
+  .microfinance-types{
+    &__col-l{
+    flex: 1 1 auto;
+    margin-right: 0;
+    }
+    &__definitions{
+      dt{
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      dd{
+        margin-bottom: 30px;
+        p{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
