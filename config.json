@@ -51,7 +51,7 @@
 		"server": {
 	        "baseDir": "./build"
 		},
-		"tunnel": true,
+		"tunnel": false,
 	    "notify": false,
 	    "open": true,
 	    "cors": true,

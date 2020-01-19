@@ -1,0 +1,67 @@
+.services{
+  &-swiper{
+    &-slide{
+      padding: 266px 20px 137px;
+
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      text-align: center;
+      background: {
+        repeat: no-repeat;
+        color: $dark-color;
+        image: url('assets/images/static/serv.png');
+        position: center 142px;
+      }
+      &.swiper-slide-active{
+        background-color: $primary-color;
+      }
+      &__title{
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        font-size: 24px;
+      }
+      &__text{
+        margin-bottom: 22px;
+        font-family: 'Myriad', sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      &__btn{
+        display: inline-block;
+        height: 30px;
+        padding: 0 26px;
+        border: none;
+        background-color: $light-color;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 28px;
+      }
+    }
+    &-arrow{
+      &.swiper-button-prev:after, &.swiper-button-next:after{
+        font-size: 23px;
+      }
+      &.swiper-button-prev, &.swiper-button-next{
+        top: auto;
+        bottom: 1px;
+        height: 34px;
+        width: 31px;
+        color: #000000;
+        // border: 1px solid rgba(#ffffff,0.5);
+        background-color: $primary-color;
+      }
+      &.swiper-button-prev{
+        left: auto;
+        right: 32px;
+      }
+      &.swiper-button-next{
+        right: 0;
+      }
+    }
+  }
+}

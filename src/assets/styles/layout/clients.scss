@@ -1,0 +1,37 @@
+.clients{
+  &-title-wrap{
+    border-bottom: 15px solid #fbfbfb; 
+  }
+  &-wrap{
+    border-bottom: 73px solid #fbfbfb; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+  }
+  &__item{
+    flex: 1 1 25%;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: $sm){
+  .clients{
+    
+    &__item{
+      flex: 1 1 33%;
+    }
+  }
+}
+
+@media (max-width: $xs){
+  .clients{
+    
+    &__item{
+      flex: 1 1 50%;
+    }
+  }
+}

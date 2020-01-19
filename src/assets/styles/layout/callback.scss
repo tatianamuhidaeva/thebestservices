@@ -1,0 +1,78 @@
+.callback{
+  &-wrap{
+    padding: 23px 42px;
+    display: flex;
+    align-items: center;
+    background-color: $primary-color;
+    color: #ffffff;
+  }
+  &-content{
+    flex: 1 1 40%;
+    padding-bottom: 30px;
+    padding-right: 35px;
+  }
+  &__title{
+    font-size: 30px;
+    margin-bottom: 25px;
+    transform: scaleX(0.7);
+    transform-origin: left;
+  }
+  &__text{
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  &-form{
+    flex: 1 1 53%;
+    display: flex;
+  }
+  &__input{
+    display: block;
+    flex: 1 1 40%;
+    height: 43px;
+    border: 1px solid #ffffff;
+    background-color: $primary-color;
+    font-size: 11px;
+    padding: 14px 23px;
+    color: #ffffff;
+    &::placeholder{
+      color: #ffffff;
+    }
+    &:first-child{
+      border-radius: 2px 0 0 2px;
+    }
+  }
+  &__btn{
+    display: block;
+    flex: 1 1 20%;
+    min-width: 90px;
+    height: 43px;
+    background-color: #fff;
+    border: 1px solid #ffffff;
+    border-radius: 0 2px 2px 0;
+    color: $primary-color;
+    font-weight: bold;
+    text-align: center;
+    padding: 14px;
+    cursor: pointer;
+    &:hover{
+      background-color: $primary-color;
+      color: #ffffff;
+    }
+  }
+
+}
+@media (max-width: $sm){
+  .callback{
+    &-wrap{
+      flex-direction: column;
+    }
+  }
+}
+@media (max-width: $xs){
+  .callback{
+    &-form{
+flex-direction: column;
+    }
+  }
+}

@@ -1,104 +1,116 @@
-.main {
-  padding-top: 155px;
-  background-color: #fff;
-  .row{
-    align-items: center;
-  }
-  &-content{
-    flex: 1 0 auto;
-  }
-  &-figure {
-    flex: 1 1 546;
-    &__img{
-      width: 546px;
-      max-width: 100%;
+.main{
+  &-swiper{
+    &-container{
+      height: 554px;
+    }
+    &-slide{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      background: {
+        repeat: no-repeat;
+        color: transparent;
+        image: url('assets/images/static/banner-bg.png');
+        size: cover;
+        position: center;
+      }
+      &__inner-wrap{
+        position: relative;
+        padding: 37px 40px 55px;
+        border: 1px solid rgba(#ffffff,0.5);
+        border-bottom: transparent;
+        text-align: center;
+        &::before, &::after{
+          content: "";
+          position: absolute;
+          bottom: 0;
+          height: 1px;
+          width: 33%;
+          background-color: rgba(#ffffff,0.5);
+        }
+        &::before{
+          left: 0;
+        }
+        &::after{
+          right: 0;
+        }
+      }
+      &__title{
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 17px;
+        font-size: 48px;
+        transform: scaleX(0.85);
+      }
+      &__text{
+        max-width: 343px;
+        margin: 0 auto;
+        font-family: 'Myriad', sans-serif;
+        font-size: 9px;
+        line-height: 2;
+      }
+      &__btn{
+        display: inline-block;
+        position: absolute;
+        height: 36px;
+        bottom: 0;
+        left: 50%;
+        padding: 0 26px;
+        border: 3px solid #ffffff;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 28px;
+        transform: translate(-50%, 50%);
+      }
+    }
+    &-arrow{
+      &.swiper-button-prev:after, &.swiper-button-next:after{
+        font-size: 23px;
+      }
+      &.swiper-button-prev, &.swiper-button-next{
+        top: 53%;
+        height: 34px;
+        color: rgba(#ffffff,0.5);
+        border: 1px solid rgba(#ffffff,0.5);
+      }
+      &.swiper-button-prev{
+        left: 44px;
+      }
+      &.swiper-button-next{
+        right: 44px;
+      }
     }
   }
-  &__title{
-    margin-bottom: 30px;
-    font-size: rem(70);
-    font-weight: 900;
-    &-sup {
-      margin-bottom: 30px;
-      font-size: rem(18);
-      font-weight: 400;
-    }
-    &-sub {
-      margin-bottom: 30px;
-      display: block;
-      font-size: rem(28);
-      font-weight: 600;
-    }
-  }
-
 }
 
+@media (max-width: $sm){
+  .main-swiper-slide__title{
+    font-size: 40px;
+  }
+  .main-swiper-slide__inner-wrap{
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+@media (max-width: $xs){
 
-@media only screen and (max-width: $lg){
-  .main {
-    &__title{
-      margin-bottom: 15px;
-      font-size: rem(64);
-      &-sup {
-        font-size: rem(18);
-        font-weight: 400;
+  .main-swiper-slide__inner-wrap{
+    // padding: 0;
+    border: 0;
+    &::before,&::after{
+      display: none;
+    }
+  }
+  .main-swiper{
+    &-arrow{
+      &.swiper-button-prev{
+        left: 10px;
       }
-      &-sub {
-        font-size: rem(24);
+      &.swiper-button-next{
+        right: 10px;
       }
     }
   }
 }
-@media only screen and (max-width: $md){
-  .main {
-    padding-top: 200px;
-
-    .row{
-      flex-wrap: wrap;
-    }
-    &-content{
-      margin-bottom: 30px;
-    }
-    &-figure {
-      flex: 1 1 100%;
-      text-align: center;
-      &__img{
-        width: 390px;
-      }
-    }
-  }
-} 
-@media only screen and (max-width: $xs){
-  .main {
-  padding-top: 130px;
-
-    &__title{
-      margin-bottom: 15px;
-      font-size: rem(50);
-      &-sup {
-        font-size: rem(18);
-        margin-bottom: 20px;
-      }
-      &-sub {
-        font-size: rem(20);
-        margin-bottom: 20px;
-      }
-    }
-  }
-} 
-@media only screen and (max-width: $xxs){
-  .main {
-    &__title{
-      margin-bottom: 15px;
-      font-size: rem(36);
-      &-sup {
-        font-size: rem(14);
-        margin-bottom: 20px;
-      }
-      &-sub {
-        font-size: rem(16);
-        margin-bottom: 20px;
-      }
-    }
-  }
-} 
