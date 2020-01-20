@@ -149,6 +149,14 @@ li {
   }
 }
 
+@media (max-width: $sm){
+  .section-title {
+    &__text {
+      font-size: 30px;
+    }
+  }
+}
+
 // Layouts
 @import "layout/header.scss";
 @import "layout/main.scss";

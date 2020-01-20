@@ -105,3 +105,22 @@
     }
   }
 }
+@media (max-width: $xs){
+  .footer{
+    &-nav{
+      margin-right: 29px;
+    }
+    &-form{
+      flex-direction: column;
+    }
+    &-socials{
+      &__list{
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      &__item{
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
